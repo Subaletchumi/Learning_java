@@ -1,0 +1,164 @@
+
+// Java program for RealNumber to Binary convertion
+public class RealnumberToBinary {
+   public static void main( String args[] ) {
+      int num = 25;
+      // converting to binary and representing it in a string
+      String bin = Integer.toBinaryString(num);
+      System.out.println(bin);
+   }
+}
+
+output: 11001
+
+// Java program for Floating Point to Binary convertion
+import java.io.*;
+public class FloatToBinary {
+   static void decimal_to_bin(int n){
+      int[] bin_num = new int[50];
+      int i = 0;
+      while (n > 0){
+         bin_num[i] = n % 2;
+         n = n / 2;
+         i++;
+      }
+      for (int j = i - 1; j >= 0; j--)
+      System.out.print(bin_num[j]);
+   }
+   public static void main (String[] args){
+      int n = 89;
+      System.out.println("The conversion from floating to binary is ");
+      decimal_to_bin(n);
+   }
+}
+/* contains a function named ‘decimal_to_bin’ that converts a given decimal number into a binary number
+ by iterating through every digit of the number and dividing by 2, 
+ and taking its remainder, and again dividing the number by 2 */
+ 
+// Java program for character to binary conversion
+
+// Java program to convert
+// string into binary string
+import java.util.*;
+
+class Node
+{
+
+	// utility function
+	static void CharToBinary(String s)
+	{
+		int n = s.length();
+
+		for (int i = 0; i < n; i++)
+		{
+			// convert each char to
+			// ASCII value
+			int val = Integer.valueOf(s.charAt(i));
+
+			// Convert ASCII value to binary
+			String bin = "";
+			while (val > 0)
+			{
+				if (val % 2 == 1)
+				{
+					bin += '1';
+				}
+				else
+					bin += '0';
+				val /= 2;
+			}
+			bin = reverse(bin);
+
+			System.out.print(bin + " ");
+		}
+	}
+
+	static String reverse(String input)
+	{
+		char[] a = input.toCharArray();
+		int l, r = 0;
+		r = a.length - 1;
+
+		for (l = 0; l < r; l++, r--)
+		{
+			// Swap values of l and r
+			char temp = a[l];
+			a[l] = a[r];
+			a[r] = temp;
+		}
+		return String.valueOf(a);
+	}
+
+	// Driver code
+	public static void main(String[] args)
+	{
+		String s = "java";
+		CharToBinary(s);
+	}
+}
+
+// Java program for boolean to binary conversion
+
+Not able to find the soultion
+
+// Java program for String to binary conversion
+
+// Java program to convert
+// string into binary string
+import java.util.*;
+
+class Node
+{
+
+	// utility function
+	static void CharToBinary(String s)
+	{
+		int n = s.length();
+
+		for (int i = 0; i < n; i++)
+		{
+			// convert each char to
+			// ASCII value
+			int val = Integer.valueOf(s.charAt(i));
+
+			// Convert ASCII value to binary
+			String bin = "";
+			while (val > 0)
+			{
+				if (val % 2 == 1)
+				{
+					bin += '1';
+				}
+				else
+					bin += '0';
+				val /= 2;
+			}
+			bin = reverse(bin);
+
+			System.out.print(bin + " ");
+		}
+	}
+
+	static String reverse(String input)
+	{
+		char[] a = input.toCharArray();
+		int l, r = 0;
+		r = a.length - 1;
+
+		for (l = 0; l < r; l++, r--)
+		{
+			// Swap values of l and r
+			char temp = a[l];
+			a[l] = a[r];
+			a[r] = temp;
+		}
+		return String.valueOf(a);
+	}
+
+	// Driver code
+	public static void main(String[] args)
+	{
+		String s = "java";
+		CharToBinary(s);
+	}
+}
